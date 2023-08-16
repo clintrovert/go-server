@@ -113,8 +113,8 @@ func (b *Builder) WithResponseCache(conf CacheConfig) *Builder {
 	return b
 }
 
-// WithMetrics todo: describe
-func (b *Builder) WithMetrics(
+// WithPrometheusMetrics todo: describe
+func (b *Builder) WithPrometheusMetrics(
 	httpPort int,
 	registerer prometheus.Registerer,
 ) *Builder {

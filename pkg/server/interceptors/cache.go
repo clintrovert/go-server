@@ -53,7 +53,8 @@ func NewCacheInterceptor(
 }
 
 func (c *CacheInterceptor) UnaryServerInterceptor(
-	keyFunc KeyGenerationFunc, ttl time.Duration,
+	keyFunc KeyGenerationFunc,
+	ttl time.Duration,
 ) grpc.UnaryServerInterceptor {
 	return func(
 		ctx context.Context,
@@ -85,7 +86,8 @@ func (c *CacheInterceptor) UnaryServerInterceptor(
 }
 
 func (c *CacheInterceptor) StreamServerInterceptor(
-	keyFunc KeyGenerationFunc, ttl time.Duration,
+	keyFunc KeyGenerationFunc,
+	ttl time.Duration,
 ) grpc.StreamServerInterceptor {
 	return nil
 }
